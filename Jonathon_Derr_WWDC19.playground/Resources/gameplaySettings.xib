@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="GameplaySettingsVC" customModule="WWDCCompiler">
+            <connections>
+                <outlet property="mouseControl" destination="GbC-G4-btI" id="E2z-Rr-Mgs"/>
+                <outlet property="view" destination="c22-O7-iKe" id="LdH-nh-I9j"/>
+                <outlet property="wasdControl" destination="lTl-mn-too" id="cW8-Gd-e4r"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="791" height="467"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="8yj-pW-kT2">
+                    <rect key="frame" x="0.0" y="0.0" width="396" height="439"/>
+                    <subviews>
+                        <button identifier="mouseControlButton" translatesAutoresizingMaskIntoConstraints="NO" id="GbC-G4-btI">
+                            <rect key="frame" x="134" y="156" width="128" height="128"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="128" id="CeM-IE-sOS"/>
+                                <constraint firstAttribute="height" constant="128" id="O2a-NW-H1L"/>
+                            </constraints>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSApplicationIcon" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="a6P-YG-WHN">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="mouseControlClickedWithSender:" target="-2" id="Kur-cu-ctD"/>
+                            </connections>
+                        </button>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wrv-AW-RAG">
+                            <rect key="frame" x="148" y="292" width="99" height="17"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="Mouse Control" id="7Ku-lA-79W">
+                                <font key="font" metaFont="systemBold"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="GbC-G4-btI" firstAttribute="centerY" secondItem="8yj-pW-kT2" secondAttribute="centerY" id="Aet-0j-E2n"/>
+                        <constraint firstItem="wrv-AW-RAG" firstAttribute="centerX" secondItem="GbC-G4-btI" secondAttribute="centerX" id="dMY-rt-HJM"/>
+                        <constraint firstItem="GbC-G4-btI" firstAttribute="centerX" secondItem="8yj-pW-kT2" secondAttribute="centerX" id="v9y-K4-zdM"/>
+                        <constraint firstItem="GbC-G4-btI" firstAttribute="top" secondItem="wrv-AW-RAG" secondAttribute="bottom" constant="8" id="vfT-W3-PEP"/>
+                    </constraints>
+                </customView>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="Bmw-HW-zwc">
+                    <rect key="frame" x="396" y="0.0" width="395" height="439"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VCi-hP-d4Q">
+                            <rect key="frame" x="129" y="292" width="137" height="17"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="WASD or Arrow keys" id="aAl-hJ-HY3">
+                                <font key="font" metaFont="systemBold"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <button translatesAutoresizingMaskIntoConstraints="NO" id="lTl-mn-too">
+                            <rect key="frame" x="133" y="156" width="128" height="128"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="128" id="Dt6-93-XXi"/>
+                                <constraint firstAttribute="height" constant="128" id="fga-aQ-Vui"/>
+                            </constraints>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSTrashFull" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Vrm-Gi-mbF">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="wasdControlClickedWithSender:" target="-2" id="v8N-kK-ZIa"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="lTl-mn-too" firstAttribute="centerY" secondItem="Bmw-HW-zwc" secondAttribute="centerY" id="1QO-AT-SU4"/>
+                        <constraint firstItem="VCi-hP-d4Q" firstAttribute="centerX" secondItem="lTl-mn-too" secondAttribute="centerX" id="Z4P-4b-mfG"/>
+                        <constraint firstItem="lTl-mn-too" firstAttribute="centerX" secondItem="Bmw-HW-zwc" secondAttribute="centerX" id="cXf-QU-ci9"/>
+                        <constraint firstItem="lTl-mn-too" firstAttribute="top" secondItem="VCi-hP-d4Q" secondAttribute="bottom" constant="8" id="zH4-sM-QGG"/>
+                    </constraints>
+                </customView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dVM-xK-SIK">
+                    <rect key="frame" x="39" y="447" width="713" height="17"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Select Your Type of Control" id="adU-Eu-k6b">
+                        <font key="font" usesAppearanceFont="YES"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="8yj-pW-kT2" firstAttribute="width" secondItem="c22-O7-iKe" secondAttribute="width" multiplier="1:2" id="DkU-eU-QQ9"/>
+                <constraint firstItem="dVM-xK-SIK" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="3" id="QaD-wZ-Wm2"/>
+                <constraint firstAttribute="bottom" secondItem="Bmw-HW-zwc" secondAttribute="bottom" id="Wjd-pr-5uR"/>
+                <constraint firstItem="Bmw-HW-zwc" firstAttribute="top" secondItem="dVM-xK-SIK" secondAttribute="bottom" constant="8" id="XcH-dv-OEb"/>
+                <constraint firstItem="8yj-pW-kT2" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="YPX-56-HBw"/>
+                <constraint firstItem="8yj-pW-kT2" firstAttribute="top" secondItem="dVM-xK-SIK" secondAttribute="bottom" constant="8" id="cOM-Re-A80"/>
+                <constraint firstItem="dVM-xK-SIK" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="41" id="dzV-ad-wGk"/>
+                <constraint firstAttribute="bottom" secondItem="8yj-pW-kT2" secondAttribute="bottom" id="iBe-jc-yxQ"/>
+                <constraint firstAttribute="trailing" secondItem="Bmw-HW-zwc" secondAttribute="trailing" id="jmA-d4-Dvy"/>
+                <constraint firstAttribute="trailing" secondItem="dVM-xK-SIK" secondAttribute="trailing" constant="41" id="m6K-sW-7Jx"/>
+                <constraint firstItem="Bmw-HW-zwc" firstAttribute="width" secondItem="c22-O7-iKe" secondAttribute="width" multiplier="1:2" id="qKC-Vt-H1n"/>
+            </constraints>
+            <point key="canvasLocation" x="204.5" y="-52.5"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSApplicationIcon" width="128" height="128"/>
+        <image name="NSTrashFull" width="128" height="128"/>
+    </resources>
+</document>
